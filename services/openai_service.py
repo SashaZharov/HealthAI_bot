@@ -29,7 +29,7 @@ class OpenAIService:
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": prompt}
                 ],
-                max_tokens=OPENAI_MAX_TOKENS,
+                max_completion_tokens=OPENAI_MAX_TOKENS,
                 temperature=OPENAI_TEMPERATURE
             )
             
