@@ -30,7 +30,6 @@ class OpenAIService:
                     {"role": "user", "content": prompt}
                 ],
                 max_completion_tokens=OPENAI_MAX_TOKENS,
-                temperature=OPENAI_TEMPERATURE
             )
             
             return response.choices[0].message.content

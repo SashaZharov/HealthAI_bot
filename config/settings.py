@@ -13,7 +13,6 @@ NAME, AGE, HEIGHT, WEIGHT = range(4)
 # Настройки OpenAI
 OPENAI_MODEL = "gpt-5-mini"
 OPENAI_MAX_TOKENS = 1000
-OPENAI_TEMPERATURE = 0.7
 
 # Валидация данных
 MIN_AGE = 1
