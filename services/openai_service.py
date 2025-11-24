@@ -1,6 +1,6 @@
 import logging
 from openai import OpenAI
-from config.settings import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_MAX_TOKENS
+from config.settings import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE
 from config.prompts import SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
@@ -29,7 +29,8 @@ class OpenAIService:
                     {"role": "system", "content": SYSTEM_PROMPT},
                     {"role": "user", "content": prompt}
                 ],
-                max_completion_tokens=OPENAI_MAX_TOKENS,
+                max_tokens=OPENAI_MAX_TOKENS,
+                temperature=OPENAI_TEMPERATURE
             )
             
             return response.choices[0].message.content
