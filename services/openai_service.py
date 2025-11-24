@@ -1,6 +1,6 @@
 import logging
 from openai import OpenAI
-from config.settings import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_MAX_TOKENS, OPENAI_TEMPERATURE
+from config.settings import OPENAI_API_KEY, OPENAI_MODEL, OPENAI_MAX_TOKENS
 from config.prompts import SYSTEM_PROMPT
 
 logger = logging.getLogger(__name__)
